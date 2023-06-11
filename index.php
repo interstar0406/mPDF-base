@@ -6,6 +6,8 @@ $mpdf = new \Mpdf\Mpdf();
 $mpdf->WriteHTML('<h1>Hello world!</h1>');
 $mpdf->AddPage();
 $mpdf->Image('img/Capture.png', 10, 10, 50, 50, 'png');
+$mpdf->AddPage();
+$mpdf->Image('https://mpdf-app.dev.cc:8890/img/Capture.png', 10, 10, 50, 50, 'png');
 $mpdf->Output('data/test.pdf', 'F');
 ?>
 
