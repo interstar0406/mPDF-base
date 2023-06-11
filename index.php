@@ -7,7 +7,7 @@ $mpdf->WriteHTML('<h1>Hello world!</h1>');
 $mpdf->AddPage();
 $mpdf->Image('img/Capture.png', 10, 10, 50, 50, 'png');
 $mpdf->AddPage();
-$mpdf->Image('https://mpdf-app.dev.cc:8890/img/Capture.png', 10, 10, 50, 50, 'png');
+$mpdf->Image('https://mpdf-app.dev.cc:8890/img/Capture.png', 10, 10, 50, 50, 'png'); // => This line is the problem => absolute url not working
 $mpdf->Output('data/test.pdf', 'F');
 ?>
 
