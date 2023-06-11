@@ -4,7 +4,8 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf();
 $mpdf->WriteHTML('<h1>Hello world!</h1>');
-$mpdf->Image('/Users/apple/Documents/cnb/mPDF/img/Capture.png', 10, 10, 50, 50, 'png');
+$mpdf->AddPage();
+$mpdf->Image('img/Capture.png', 10, 10, 50, 50, 'png');
 $mpdf->Output('data/test.pdf', 'F');
 ?>
 
