@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
-$mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => 'A4-P', 'format' => 'A4']);
+$mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => 'A4-P']);
 $sku = 'AADC2134';
 
 // START html
@@ -35,7 +35,7 @@ $heightPDF = 297; // mm
 // Layout 1 have 8 box/side, 4 row, 2 column
 // box ratio 18:24 ~ 3:4
 $gap = 2; // mm
-$distanceTopBottom = 2; // mm
+$distanceTopBottom = 3; // mm
 $widthBox = 50.25; // mm
 $heightBox = 67; // (297 - (gap * 3)) / 2 ~ 400
 // $xBox = $widthPDF / 2 - $widthBox - $gap/2; // mm
@@ -48,7 +48,7 @@ $mpdf->WriteHTML('<table style="margin: '.$distanceTopBottom.'mm auto"><tbody>')
         $mpdf->WriteHTML('</td>');
         $mpdf->WriteHTML('<td width="'.$widthBox.'mm" height="'.$heightBox.'mm">');
         $mpdf->WriteHTML('<div style="overflow: hidden" width="'.$widthBox.'mm" height="'.$heightBox.'mm">');
-        $mpdf->WriteHTML('<img style="transform: rotate(90deg)" src="img/Capture.png" width="'.$widthBox.'mm" height="'.$heightBox.'mm" />');
+        $mpdf->WriteHTML('<img style="transform: rotate(-45deg)" src="img/Capture.png" width="'.$widthBox.'mm" height="'.$heightBox.'mm" />');  // FIXME: OVERFLOW HIDDEN NOT WORKING
         $mpdf->WriteHTML('</div>');
         $mpdf->WriteHTML('</td>');
     $mpdf->WriteHTML('</tr>');
