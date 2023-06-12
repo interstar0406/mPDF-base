@@ -23,8 +23,8 @@ td{
 </style>');
 $mpdf->WriteHTML('</head>');
 $mpdf->WriteHTML('<body>');
-$mpdf->writeBarcode($sku,0.2,0.1,1,0.6,0,1,1,1,1,1,false,false,'C128A');
-$mpdf->WriteText(3.5,9, $sku);
+$mpdf->writeBarcode($sku, 0.2, 0.1, 1, 0.6, 0, 1, 1, 1, 1, 1, false, false, 'C128A');
+$mpdf->WriteText(3.5, 9, $sku);
 
 //Content Layout 1
 
@@ -39,54 +39,56 @@ $distanceTopBottom = 4; // mm
 $widthBox = 50.25; // mm
 $heightBox = 67; // (297 - (gap * 3)) / 2 ~ 400
 
-$mpdf->WriteHTML('<table style="margin: '.$distanceTopBottom.'mm auto"><tbody>');
-    $mpdf->WriteHTML('<tr>');
-        $mpdf->WriteHTML('<td width="'.$widthBox.'mm" height="'.$heightBox.'mm">');
-        $mpdf->WriteHTML('<img src="img/Capture.png" width="'.$widthBox.'mm" height="'.$heightBox.'mm" />');
-        $mpdf->WriteHTML('</td>');
-        $mpdf->WriteHTML('<td width="'.$widthBox.'mm" height="'.$heightBox.'mm">');
-        $mpdf->WriteHTML('<div style="overflow: hidden" width="'.$widthBox.'mm" height="'.$heightBox.'mm">');
-        $mpdf->WriteHTML('<img style="transform: rotate(-90deg)" src="img/Capture.png" width="'.$widthBox.'mm" height="'.$heightBox.'mm" />');  // FIXME: OVERFLOW HIDDEN NOT WORKING
-        $mpdf->WriteHTML('</div>');
-        $mpdf->WriteHTML('</td>');
-    $mpdf->WriteHTML('</tr>');
-    $mpdf->WriteHTML('<tr>');
-        $mpdf->WriteHTML('<td width="'.$widthBox.'mm" height="'.$heightBox.'mm">');
-        $mpdf->WriteHTML('<img src="img/Capture.png" width="'.$widthBox.'mm" height="'.$heightBox.'mm" />');
-        $mpdf->WriteHTML('</td>');
-        $mpdf->WriteHTML('<td width="'.$widthBox.'mm" height="'.$heightBox.'mm">');
-        $mpdf->WriteHTML('<img src="img/Capture.png" width="'.$widthBox.'mm" height="'.$heightBox.'mm" />');
-        $mpdf->WriteHTML('</td>');
-    $mpdf->WriteHTML('</tr>');
-    $mpdf->WriteHTML('<tr>');
-        $mpdf->WriteHTML('<td width="'.$widthBox.'mm" height="'.$heightBox.'mm">');
-        $mpdf->WriteHTML('<img src="img/Capture.png" width="'.$widthBox.'mm" height="'.$heightBox.'mm" />');
-        $mpdf->WriteHTML('</td>');
-        $mpdf->WriteHTML('<td width="'.$widthBox.'mm" height="'.$heightBox.'mm">');
-        $mpdf->WriteHTML('<img src="img/Capture.png" width="'.$widthBox.'mm" height="'.$heightBox.'mm" />');
-        $mpdf->WriteHTML('</td>');
-    $mpdf->WriteHTML('</tr>');
-    $mpdf->WriteHTML('<tr>');
-        $mpdf->WriteHTML('<td width="'.$widthBox.'mm" height="'.$heightBox.'mm">');
-        $mpdf->WriteHTML('<img src="img/Capture.png" width="'.$widthBox.'mm" height="'.$heightBox.'mm" />');
-        $mpdf->WriteHTML('</td>');
-        $mpdf->WriteHTML('<td width="'.$widthBox.'mm" height="'.$heightBox.'mm">');
-        $mpdf->WriteHTML('<img src="img/Capture.png" width="'.$widthBox.'mm" height="'.$heightBox.'mm" />');
-        $mpdf->WriteHTML('</td>');
-    $mpdf->WriteHTML('</tr>');
-$mpdf->WriteHTML('</tbody></table>');
-$mpdf->WriteHTML('</body>');
-$mpdf->WriteHTML('<html>');
+$mpdf->WriteHTML('<table style="margin: ' . $distanceTopBottom . 'mm auto"><tbody>
+    <tr>
+        <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
+        <img src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
+        </td>
+        <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
+        <div style="overflow: hidden" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
+        <img style="transform: rotate(-90deg)" src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
+        </div>
+        </td>
+    </tr>
+    <tr>
+        <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
+        <img src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
+        </td>
+        <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
+        <img src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
+        </td>
+    </tr>
+    <tr>
+        <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
+        <img src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
+        </td>
+        <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
+        <img src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
+        </td>
+    </tr>
+    <tr>
+        <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
+        <img src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
+        </td>
+        <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
+        <img src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
+        </td>
+    </tr>
+</tbody></table>
+</body>
+<html>');
 // END html
 ?>
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mPDF test file</title>
 </head>
+
 <body style="margin: 40px;">
     <h1 style="text-align: center; margin: 100px auto 50px;">This screen only works to export pdf files, check <a href="data/product-php.pdf" target="_blank" style="color: red">data/product-php.pdf</a> to see the results</h1>
 
@@ -95,6 +97,7 @@ $mpdf->WriteHTML('<html>');
             <?php $mpdf->OutputHttpInline(); ?>
         </textarea>
     </div>
-    
+
 </body>
+
 </html>
