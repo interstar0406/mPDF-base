@@ -19,6 +19,6 @@ $mpdf->Output('data/test.pdf', 'F');
     <title>mPDF test file</title>
 </head>
 <body>
-    <h1 style="text-align: center; margin: 200px auto;">This screen only works to export pdf files, check <span style="color: red">data/test.pdf</span> to see the results</h1>
+    <h1 style="text-align: center; margin: 200px auto;">This screen only works to export pdf files, check <a href="data/test.pdf" target="_blank" style="color: red">data/test.pdf</a> to see the results</h1>
 </body>
 </html>
