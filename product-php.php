@@ -75,6 +75,8 @@ $mpdf->WriteHTML('<table style="margin: '.$distanceTopBottom.'mm auto"><tbody>')
         $mpdf->WriteHTML('</td>');
     $mpdf->WriteHTML('</tr>');
 $mpdf->WriteHTML('</tbody></table>');
+$mpdf->WriteHTML('</body>');
+$mpdf->WriteHTML('<html>');
 // END html
 ?>
 
