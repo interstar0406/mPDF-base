@@ -39,44 +39,46 @@ $distanceTopBottom = 4; // mm
 $widthBox = 50.25; // mm
 $heightBox = 67; // (297 - (gap * 3)) / 2 ~ 400
 
-$mpdf->WriteHTML('<table style="margin: ' . $distanceTopBottom . 'mm auto"><tbody>
-    <tr>
-        <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
+$layout = 'layout_1';
+$html  = '<table style="margin: ' . $distanceTopBottom . 'mm auto"><tbody>
+<tr>
+    <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
         <img src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
-        </td>
-        <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
+    </td>
+    <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
         <div style="overflow: hidden" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
-        <img style="transform: rotate(-90deg)" src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
+            <img style="transform: rotate(-90deg)" src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
         </div>
-        </td>
-    </tr>
-    <tr>
-        <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
-        <img src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
-        </td>
-        <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
-        <img src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
-        </td>
-    </tr>
-    <tr>
-        <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
-        <img src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
-        </td>
-        <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
-        <img src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
-        </td>
-    </tr>
-    <tr>
-        <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
-        <img src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
-        </td>
-        <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
-        <img src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
-        </td>
-    </tr>
-</tbody></table>
-</body>
-<html>');
+    </td>
+</tr>
+<tr>
+    <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
+    <img src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
+    </td>
+    <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
+    <img src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
+    </td>
+</tr>
+<tr>
+    <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
+    <img src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
+    </td>
+    <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
+    <img src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
+    </td>
+</tr>
+<tr>
+    <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
+    <img src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
+    </td>
+    <td width="' . $widthBox . 'mm" height="' . $heightBox . 'mm">
+    <img src="img/Capture.png" width="' . $widthBox . 'mm" height="' . $heightBox . 'mm" />
+    </td>
+</tr>
+</tbody></table>';
+
+$mpdf->WriteHTML($html);
+$mpdf->WriteHTML('</body></html>');
 // END html
 ?>
 
